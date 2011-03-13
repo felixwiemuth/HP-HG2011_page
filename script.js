@@ -43,10 +43,9 @@ function addClickHandlers() {
 		$("#main").load("content/content03.html");
 		self.location.hash = "content03";
 		set_active_link("#link03");
-		//IMPORTANT
-		//$("#page").width(1400); //TODO FIT TO IMAGE! + reset on other links!
 		init_schulrundgang();
 		set_srg_img();
+		//$("#linkSrg1").click(); //DEBUG
 	});
 	$("#link04").click( function() { //link 4
 		$("#main").load("content/content04.html");
@@ -135,16 +134,24 @@ function set_active_link(link) {
 
 //functionality for "Schulrundgang"
 function init_schulrundgang() {
-	alert("Los gehts! (Waehrend dieser Meldung muss das Programm laden)");
+	alert("Schulrundgang - Los gehts! Bitte beachten: Es kann etwas dauern, bis alle Bilder geladen sind. Viel Spass!");
 	//links
+	//Schulrundgang A (Standard, "content03")
 	$("#linkSrg1").click( function() { //linkSrg1
-		$("#link03").click();
+		$("#main").load("content/content03.html");
+		self.location.hash = "content03";
+		set_active_link("#link03");
+		init_schulrundgang();
+		//alert("Schulrundgang A - Los gehts! Bitte beachten: Es kann etwas dauern, bis alle Bilder geladen sind. Viel Spass!");
+		set_srg_img();
 	});
+	//Schulrundgang B ("content03a")
 	$("#linkSrg2").click( function() { //linkSrg2
 		$("#main").load("content/content03a.html");
 		self.location.hash = "content03";
 		set_active_link("#link03");
 		init_schulrundgang();
+		//alert("Schulrundgang B - Los gehts! Bitte beachten: Es kann etwas dauern, bis alle Bilder geladen sind. Viel Spass!");
 		set_srgA_img();
 	});
 }
@@ -165,10 +172,40 @@ function set_srg_img() { //Schulrundgang (Standard)
 	$("#td0818").attr("href", "content/schulrundgang/imglow/Schweineboxen.png").addClass("img");
 	$("#td1110").attr("href", "content/schulrundgang/imglow/Vertretungsplan.png").addClass("img");
 	$("#td1108").attr("href", "content/schulrundgang/imglow/V-Trakt.png").addClass("img");
+	$("#td0601").attr("href", "content/schulrundgang/imglow/Mensa.png").addClass("img");
+	$("#td0409").attr("href", "content/schulrundgang/img-hp/D-Hof.png").addClass("img");
+	$("#td1303").attr("href", "content/schulrundgang/img-hp/gesamt2.png").addClass("img");
+	$("#td1302").attr("href", "content/schulrundgang/img-hp/uebersicht.png").addClass("img");
 	$(".img").imgPreview({imgCSS:{width: "150px"}}).lightBox();
 }
 
 function set_srgA_img() { //Schulrundgang A
-	$("#srgA_664").attr("href", "gfx/bg2.jpg").addClass("img");
+	$("#srgA_865").attr("href", "content/schulrundgang/imglow/A12.png").addClass("img");
+	$("#srgA_973").attr("href", "content/schulrundgang/imglow/B32.png").addClass("img");
+	$("#srgA_742").attr("href", "content/schulrundgang/imglow/bibliothek.png").addClass("img");
+	$("#srgA_590").attr("href", "content/schulrundgang/imglow/Bio.png").addClass("img");
+	$("#srgA_138").attr("href", "content/schulrundgang/imglow/D26.png").addClass("img");
+	$("#srgA_375").attr("href", "content/schulrundgang/imglow/D-Trakt_Gang.png").addClass("img");
+	$("#srgA_550").attr("href", "content/schulrundgang/imglow/Erdkunderaum.png").addClass("img");
+	$("#srgA_462").attr("href", "content/schulrundgang/imglow/KU1-1.png").addClass("img");
+	$("#srgA_688").attr("href", "content/schulrundgang/imglow/Musik.png").addClass("img");
+	$("#srgA_547").attr("href", "content/schulrundgang/imglow/N12-1.png").addClass("img");
+	$("#srgA_630").attr("href", "content/schulrundgang/imglow/N24-2.png").addClass("img");
+	$("#srgA_555").attr("href", "content/schulrundgang/imglow/N32.png").addClass("img");
+	$("#srgA_584").attr("href", "content/schulrundgang/imglow/Pausenhalle.png").addClass("img");
+	$("#srgA_503").attr("href", "content/schulrundgang/imglow/Schuleingang_Sekretariat.png").addClass("img");
+	$("#srgA_665").attr("href", "content/schulrundgang/img-hp/Cafetaria2.png").addClass("img");
+	$("#srgA_741").attr("href", "content/schulrundgang/img-hp/bibli3.png").addClass("img");
+	$("#srgA_665").attr("href", "content/schulrundgang/img-hp/Cafetaria2.png").addClass("img");
+	$("#srgA_665").attr("href", "content/schulrundgang/img-hp/Cafetaria2.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
+	$("#srgA_").attr("href", "content/schulrundgang/imglow/.png").addClass("img");
 	$(".img").imgPreview({imgCSS:{width: "150px"}}).lightBox();
 }
